@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wordly Dictionary</title>
-  <link rel=""
-  <href
+  <meta charset="UTF-8">
+  <!-- Google Fonts: Roboto for Material Design -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Wordly Dictionary SPA</title>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="wordly-container">
+    <h1>📘 Wordly Dictionary</h1>
+
+    <form id="wordly-form">
+      <input type="text" id="wordly-input" placeholder="Enter a word..." required>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="wordly-error" class="hidden"></div>
+
+    <div id="wordly-result">
+      <h2 id="wordly-title"></h2>
+      <p id="wordly-phonetic"></p>
+      <button id="wordly-audio-btn" class="hidden">🔊 Play Pronunciation</button>
+
+      <div id="wordly-definitions"></div>
+      <div id="wordly-synonyms"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
