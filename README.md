@@ -12,7 +12,7 @@ Wordly is a dictionary web application built as part of a summative lab project 
 - Dynamically updating the DOM based on API responses
 - Handling errors gracefully for a smooth user experience
 
----
+
 
 ## Features
 
@@ -24,7 +24,7 @@ Wordly is a dictionary web application built as part of a summative lab project 
 - ⚠️ **Error Handling** — Friendly messages for unknown words or network failures
 - 📱 **Responsive Design** — Works on desktop and mobile screens
 
----
+
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Wordly is a dictionary web application built as part of a summative lab project 
 | [Free Dictionary API](https://dictionaryapi.dev/) | Word data source |
 | Google Fonts (Roboto) | Typography |
 
----
+
 
 ## Project Structure
 
@@ -48,7 +48,7 @@ wordly/
 └── README.md        # Project documentation
 ```
 
----
+
 
 ## Getting Started
 
@@ -72,7 +72,7 @@ No build tools, frameworks, or installations required.
 
 > ⚠️ An active internet connection is required — the app fetches live data from the Free Dictionary API.
 
----
+
 
 ## API Reference
 
@@ -94,7 +94,7 @@ This project uses the **Free Dictionary API** — a free, open-source REST API w
    - Synonyms (click any tag to search that word)
 4. Click **🔊 Play Pronunciation** to hear the word spoken aloud
 
----
+
 
 ## Error Handling
 
@@ -106,7 +106,7 @@ This project uses the **Free Dictionary API** — a free, open-source REST API w
 | Audio unavailable | Audio button is hidden automatically |
 | No synonyms returned | Synonyms section is not rendered |
 
----
+
 
 ## Future Improvements
 
