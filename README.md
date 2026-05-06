@@ -1,24 +1,7 @@
 # 📘 Wordly — Interactive Dictionary SPA
 
-A Single Page Application (SPA) built with vanilla HTML, CSS, and JavaScript that allows users to search for words and retrieve definitions, phonetics, synonyms, and audio pronunciation — all without a page reload.
+A Single Page Application (SPA) built using HTML, CSS, and JavaScript that allows users to search for words and retrieve definitions, phonetics, synonyms, and audio pronunciation — all without a page reload.
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [API Reference](#api-reference)
-- [Usage](#usage)
-- [Error Handling](#error-handling)
-- [Screenshots](#screenshots)
-- [Future Improvements](#future-improvements)
-- [License](#license)
-
----
 
 ## Overview
 
@@ -75,7 +58,7 @@ No build tools, frameworks, or installations required.
 
 1. **Clone or download** this repository:
    ```bash
-   git clone https://github.com/your-username/wordly-spa.git
+   git clone git@github.com:evamomanyi/SPA-wordly.git
    ```
 
 2. **Navigate** into the project folder:
@@ -99,37 +82,6 @@ This project uses the **Free Dictionary API** — a free, open-source REST API w
 - **Method:** `GET`
 - **Endpoint example:** `GET /api/v2/entries/en/hello`
 
-### Sample Response Structure
-
-```json
-[
-  {
-    "word": "hello",
-    "phonetic": "/həˈloʊ/",
-    "phonetics": [
-      {
-        "text": "/həˈloʊ/",
-        "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3"
-      }
-    ],
-    "meanings": [
-      {
-        "partOfSpeech": "noun",
-        "definitions": [
-          {
-            "definition": "An utterance of 'hello'; a greeting.",
-            "example": "She gave a cheerful hello."
-          }
-        ],
-        "synonyms": ["greeting", "salutation"]
-      }
-    ],
-    "sourceUrls": ["https://en.wiktionary.org/wiki/hello"]
-  }
-]
-```
-
----
 
 ## Usage
 
@@ -165,13 +117,4 @@ This project uses the **Free Dictionary API** — a free, open-source REST API w
 - [ ] Highlight searched word within example sentences
 - [ ] Loading spinner for slower network connections
 
----
 
-## License
-
-This project was built for educational purposes as part of a web development lab assignment.  
-API data is provided by [dictionaryapi.dev](https://dictionaryapi.dev/) under open access terms.
-
----
-
-> Built with 💙 using HTML, CSS & JavaScript — no frameworks needed.
