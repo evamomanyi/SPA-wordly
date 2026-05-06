@@ -16,13 +16,13 @@ Wordly is a dictionary web application built as part of a summative lab project 
 
 ## Features
 
-- 🔍 **Word Search** — Type any English word and retrieve its dictionary entry instantly
-- 📖 **Definitions** — Displays definitions grouped by part of speech (noun, verb, adjective, etc.)
-- 🔊 **Audio Pronunciation** — Play the word's pronunciation directly in the browser
-- 🗣️ **Phonetic Text** — Shows the phonetic spelling (e.g. `/ˈwɜːdli/`)
-- 🏷️ **Synonyms** — Lists synonyms as clickable tags that trigger a new search
-- ⚠️ **Error Handling** — Friendly messages for unknown words or network failures
-- 📱 **Responsive Design** — Works on desktop and mobile screens
+-  **Word Search** — Type any English word and retrieve its dictionary entry instantly
+-  **Definitions** — Displays definitions grouped by part of speech (noun, verb, adjective, etc.)
+-  **Audio Pronunciation** — Play the word's pronunciation directly in the browser
+-  **Phonetic Text** — Shows the phonetic spelling (e.g. `/ˈwɜːdli/`)
+-  **Synonyms** — Lists synonyms as clickable tags that trigger a new search
+-  **Error Handling** — Friendly messages for unknown words or network failures
+-  **Responsive Design** — Works on desktop and mobile screens
 
 
 
@@ -70,7 +70,7 @@ No build tools, frameworks, or installations required.
    - Double-click `index.html`, **or**
    - Use a local server extension like **Live Server** in VS Code for best results
 
-> ⚠️ An active internet connection is required — the app fetches live data from the Free Dictionary API.
+> !!! An active internet connection is required since app fetches live data from the Free Dictionary API.
 
 
 
