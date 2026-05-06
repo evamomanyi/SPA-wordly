@@ -1,4 +1,4 @@
-# 📘 Wordly — Interactive Dictionary SPA
+# 📘 Wordly — Dictionary SPA
 
 A Single Page Application (SPA) built using HTML, CSS, and JavaScript that allows users to search for words and retrieve definitions, phonetics, synonyms, and audio pronunciation — all without a page reload.
 
