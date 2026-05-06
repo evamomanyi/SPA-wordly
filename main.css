@@ -1,66 +1,203 @@
+/* ── BASE ───────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
   background: linear-gradient(to right, #cbdbd4, #2a5298);
   color: white;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 16px;
+  min-height: 100vh;
 }
 
+/* ── CONTAINER ──────────────────────────────────────── */
 .wordly-container {
-  background: #ffffff10;
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   border-radius: 12px;
-  width: 400px;
+  width: 100%;
+  max-width: 460px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  height: fit-content;
 }
 
+/* ── HEADING ────────────────────────────────────────── */
 h1 {
   text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
+/* ── FORM ───────────────────────────────────────────── */
 form {
   display: flex;
   gap: 10px;
+  margin-bottom: 4px;
 }
 
-input {
+input[type="text"] {
   flex: 1;
-  padding: 10px;
+  padding: 10px 14px;
   border-radius: 6px;
   border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  outline: none;
+  transition: box-shadow 0.2s ease;
 }
 
-button {
-  padding: 10px;
+input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.5);
+}
+
+button[type="submit"] {
+  padding: 10px 18px;
   border: none;
   background: #00c6ff;
   color: white;
   border-radius: 6px;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
 }
 
-button:hover {
-  background: #0072ff;
-}
+button[type="submit"]:hover  { background: #0072ff; }
+button[type="submit"]:active { transform: scale(0.97); }
 
-.hidden {
-  display: none;
-}
+/* ── UTILITY ────────────────────────────────────────── */
+.hidden { display: none !important; }
 
+/* ── ERROR ──────────────────────────────────────────── */
 #wordly-error {
   color: #ff6b6b;
-  margin-top: 10px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  background: rgba(255, 107, 107, 0.12);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  border-radius: 6px;
+  padding: 8px 12px;
 }
 
-#wordly-definitions, #wordly-synonyms {
+/* ── RESULT AREA ────────────────────────────────────── */
+#wordly-result {
+  margin-top: 20px;
+}
+
+#wordly-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+#wordly-phonetic {
+  font-size: 1rem;
+  color: #a8d8ea;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* ── AUDIO BUTTON ───────────────────────────────────── */
+#wordly-audio-btn {
+  padding: 8px 16px;
+  border: 2px solid #00c6ff;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#wordly-audio-btn:hover {
+  background: #00c6ff;
+  color: white;
+}
+
+/* ── DEFINITIONS ────────────────────────────────────── */
+#wordly-definitions {
   margin-top: 15px;
+}
+
+#wordly-definitions h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a8d8ea;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#wordly-definitions p {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  border-left: 3px solid #00c6ff;
+}
+
+#wordly-definitions p strong {
+  color: #a8d8ea;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+}
+
+/* ── SYNONYMS ───────────────────────────────────────── */
+#wordly-synonyms {
+  margin-top: 15px;
+}
+
+#wordly-synonyms h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a8d8ea;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .synonym-tag {
   display: inline-block;
   background: #00c6ff;
-  padding: 5px 8px;
+  color: white;
+  padding: 5px 10px;
   margin: 3px;
   border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.synonym-tag:hover {
+  background: #0072ff;
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  body { padding: 20px 12px; }
+  .wordly-container { padding: 20px; }
+  h1 { font-size: 1.3rem; }
 }
